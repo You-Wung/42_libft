@@ -6,14 +6,13 @@
 /*   By: tyou <tyou@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/28 15:21:29 by tyou              #+#    #+#             */
-/*   Updated: 2021/01/07 15:41:45 by tyou             ###   ########.fr       */
+/*   Updated: 2021/01/09 23:56:10 by tyou             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
 # include <stdlib.h>
-# include <stdio.h>
 # include <string.h>
 # include <unistd.h>
 
