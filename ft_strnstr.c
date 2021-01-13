@@ -6,7 +6,7 @@
 /*   By: tyou <tyou@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/27 11:34:43 by tyou              #+#    #+#             */
-/*   Updated: 2021/01/08 15:05:58 by tyou             ###   ########.fr       */
+/*   Updated: 2021/01/13 19:21:25 by tyou             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,12 +30,13 @@ char	*ft_strnstr(const char *big, const char *little, size_t len)
 		{
 			save = (char *)big + i - cnt;
 			i++;
-			n++;
 			cnt++;
-			if (little[n] == '\0')
+			if (little[++n] == '\0')
 				return (save);
 		}
-		i++;
+		if (cnt == 0 && big[i] != '\0')
+			i++;
+		i = i - cnt + 1;
 	}
 	return (NULL);
 }
