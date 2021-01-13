@@ -6,7 +6,7 @@
 /*   By: tyou <tyou@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/27 11:34:43 by tyou              #+#    #+#             */
-/*   Updated: 2021/01/13 19:21:25 by tyou             ###   ########.fr       */
+/*   Updated: 2021/01/13 19:44:16 by tyou             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ char	*ft_strnstr(const char *big, const char *little, size_t len)
 	char	*save;
 
 	i = 0;
-	if (*little == '\0')
+	if (*little == '\0' || little == NULL)
 		return ((char *)big);
 	while (big[i] && i < len)
 	{
