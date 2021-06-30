@@ -6,7 +6,7 @@
 /*   By: tyou <tyou@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/28 14:04:17 by tyou              #+#    #+#             */
-/*   Updated: 2021/01/08 15:30:45 by tyou             ###   ########.fr       */
+/*   Updated: 2021/06/30 22:14:42 by tyou             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,8 @@ char	*ft_strjoin(char const *s1, char const *s2)
 		i = 0;
 		size1 = ft_strlen(s1);
 		size2 = ft_strlen(s2);
-		if (!(rt = malloc(size1 + size2 + 1)))
+		rt = malloc(size1 + size2 + 1);
+		if (!rt)
 			return (NULL);
 		while (i < size1)
 		{

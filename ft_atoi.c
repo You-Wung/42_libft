@@ -6,23 +6,20 @@
 /*   By: tyou <tyou@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/27 13:18:53 by tyou              #+#    #+#             */
-/*   Updated: 2021/01/09 16:44:42 by tyou             ###   ########.fr       */
+/*   Updated: 2021/06/30 20:26:53 by tyou             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <stdlib.h>
-
-int		is_space(char str)
+int	is_space(char str)
 {
 	if (str == '\t' || str == '\n' || str == '\v' || str == '\f'
-					|| str == '\r' || str == ' ')
+		|| str == '\r' || str == ' ')
 		return (1);
 	else
 		return (0);
 }
 
-int		ft_atoi(const char *str)
+int	ft_atoi(const char *str)
 {
 	int			i;
 	long long	rt;

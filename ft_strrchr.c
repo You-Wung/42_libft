@@ -6,7 +6,7 @@
 /*   By: tyou <tyou@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/06 21:17:09 by tyou              #+#    #+#             */
-/*   Updated: 2021/01/07 01:48:29 by tyou             ###   ########.fr       */
+/*   Updated: 2021/06/30 22:15:17 by tyou             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 char	*ft_strrchr(const char *s, int c)
 {
-	int size;
+	int	size;
 
 	size = 0;
 	while (s[size])
@@ -28,6 +28,6 @@ char	*ft_strrchr(const char *s, int c)
 		size--;
 	}
 	if (s[size] == (char)c)
-		return ((char*)s);
+		return ((char *)s);
 	return (NULL);
 }

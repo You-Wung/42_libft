@@ -6,16 +6,15 @@
 /*   By: tyou <tyou@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/29 10:20:01 by tyou              #+#    #+#             */
-/*   Updated: 2021/01/11 11:41:34 by tyou             ###   ########.fr       */
+/*   Updated: 2021/06/30 22:13:33 by tyou             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <stdlib.h>
+#include "libft.h"
 
-int		size_s(char *s, int c, int i)
+int	size_s(char *s, int c, int i)
 {
-	int rt;
+	int	rt;
 
 	rt = 0;
 	while (s[i])
@@ -30,11 +29,11 @@ int		size_s(char *s, int c, int i)
 	return (rt + 1);
 }
 
-int		measure(char *s, int c)
+int	measure(char *s, int c)
 {
-	int i;
-	int noc;
-	int rt;
+	int	i;
+	int	noc;
+	int	rt;
 
 	i = 0;
 	noc = 0;
@@ -66,9 +65,9 @@ char	**fre(char **rt, int j)
 
 char	**in_put(char *s, char **rt, int c, int limit)
 {
-	int i;
-	int j;
-	int k;
+	int	i;
+	int	j;
+	int	k;
 
 	i = 0;
 	j = 0;
@@ -79,12 +78,12 @@ char	**in_put(char *s, char **rt, int c, int limit)
 			i++;
 		if (s[i] && j < limit)
 		{
-			if (!(rt[j] = (char *)malloc(sizeof(char) * size_s(s, c, i))))
+			rt[j] = (char *)malloc(sizeof(char) * size_s(s, c, i));
+			if (!rt[j])
 				return (fre(rt, j));
 			while (s[i] && s[i] != c)
 				rt[j][k++] = s[i++];
-			rt[j][k] = '\0';
-			j++;
+			rt[j++][k] = '\0';
 		}
 		if (s[i] != '\0')
 			i++;
@@ -101,7 +100,8 @@ char	**ft_split(char const *s, char c)
 	if (s == NULL)
 		return (NULL);
 	i = 0;
-	if (!(rt = (char **)malloc(sizeof(char *) * measure((char*)s, c))))
+	rt = (char **)malloc(sizeof(char *) * measure((char *)s, c));
+	if (!rt)
 		return (NULL);
-	return (in_put((char*)s, rt, c, measure((char*)s, c)));
+	return (in_put((char *)s, rt, c, measure((char *)s, c)));
 }

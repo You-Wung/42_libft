@@ -6,7 +6,7 @@
 /*   By: tyou <tyou@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/28 12:49:03 by tyou              #+#    #+#             */
-/*   Updated: 2021/01/07 22:54:44 by tyou             ###   ########.fr       */
+/*   Updated: 2021/06/30 22:15:40 by tyou             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,8 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	if (s == NULL)
 		return (NULL);
 	size = ft_strlen(s);
-	if (!(rt = malloc(len + 1)))
+	rt = malloc(len + 1);
+	if (!rt)
 		return (NULL);
 	if (size <= start)
 	{

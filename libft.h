@@ -6,7 +6,7 @@
 /*   By: tyou <tyou@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/28 15:21:29 by tyou              #+#    #+#             */
-/*   Updated: 2021/01/09 23:56:10 by tyou             ###   ########.fr       */
+/*   Updated: 2021/06/30 22:16:44 by tyou             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@
 # include <string.h>
 # include <unistd.h>
 
-typedef	struct		s_list
+typedef struct s_list
 {
 	void			*content;
 	struct s_list	*next;
@@ -33,8 +33,8 @@ int					ft_atoi(const char *str);
 void				ft_bzero(void *s, size_t n);
 int					ft_toupper(int c);
 int					ft_tolower(int c);
-char				*ft_strnstr(const char *big, const char *little
-											, size_t len);
+char				*ft_strnstr(const char *big, const char *little,
+						size_t len);
 int					ft_strncmp(const char *s1, const char *s2, size_t n);
 size_t				ft_strlen(const char *str);
 size_t				ft_strlcpy(char *dst, const char *src, size_t size);
@@ -65,6 +65,6 @@ void				ft_lstadd_back(t_list **lst, t_list *new);
 void				ft_lstdelone(t_list *lst, void (*del)(void *));
 void				ft_lstclear(t_list **lst, void (*del)(void *));
 void				ft_lstiter(t_list *lst, void (*f)(void *));
-t_list				*ft_lstmap(t_list *lst, void *(*f)(void *)
-										, void (*del)(void *));
+t_list				*ft_lstmap(t_list *lst, void *(*f)(void *),
+						void (*del)(void *));
 #endif

@@ -6,7 +6,7 @@
 /*   By: tyou <tyou@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/24 01:24:30 by tyou              #+#    #+#             */
-/*   Updated: 2021/01/07 21:17:08 by tyou             ###   ########.fr       */
+/*   Updated: 2021/06/30 21:59:30 by tyou             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,10 +27,12 @@ void	*ft_memmove(void *dst, const void *src, size_t len)
 		while (len-- > 0)
 			dst2[len] = src2[len];
 	else
+	{	
 		while (i < len)
 		{
 			dst2[i] = src2[i];
 			i++;
 		}
+	}
 	return (dst);
 }

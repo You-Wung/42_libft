@@ -6,7 +6,7 @@
 /*   By: tyou <tyou@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/25 22:50:18 by tyou              #+#    #+#             */
-/*   Updated: 2021/01/07 16:27:56 by tyou             ###   ########.fr       */
+/*   Updated: 2021/06/30 22:13:48 by tyou             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,9 @@
 
 char	*ft_strchr(const char *s, int c)
 {
-	char *tmp;
+	char	*tmp;
 
-	tmp = (char*)s;
+	tmp = (char *)s;
 	while (*tmp != c)
 	{
 		if (!*tmp)

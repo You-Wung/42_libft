@@ -6,21 +6,20 @@
 /*   By: tyou <tyou@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/23 18:32:25 by tyou              #+#    #+#             */
-/*   Updated: 2021/01/06 17:03:59 by tyou             ###   ########.fr       */
+/*   Updated: 2021/06/30 20:27:29 by tyou             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <string.h>
+#include "libft.h"
 
 void	ft_bzero(void *s, size_t n)
 {
-	size_t i;
+	size_t	i;
 
 	i = 0;
 	while (i < n)
 	{
-		*((char*)s + i) = 0;
+		*((char *)s + i) = 0;
 		i++;
 	}
 }

@@ -6,7 +6,7 @@
 /*   By: tyou <tyou@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/23 18:31:29 by taewung           #+#    #+#             */
-/*   Updated: 2021/01/06 15:57:46 by tyou             ###   ########.fr       */
+/*   Updated: 2021/06/30 21:59:42 by tyou             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ void	*ft_memset(void *s, int c, size_t n)
 	tmp = s;
 	while (i < n)
 	{
-		*((char*)tmp + i) = c;
+		*((char *)tmp + i) = c;
 		i++;
 	}
 	return (s);

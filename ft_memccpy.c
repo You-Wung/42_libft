@@ -6,7 +6,7 @@
 /*   By: tyou <tyou@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/24 22:42:19 by tyou              #+#    #+#             */
-/*   Updated: 2021/01/07 20:51:49 by tyou             ###   ########.fr       */
+/*   Updated: 2021/06/30 21:58:37 by tyou             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,8 +20,8 @@ void	*ft_memccpy(void *dst, void *src, int c, size_t n)
 	unsigned char	*src2;
 
 	i = 0;
-	src2 = (unsigned char*)src;
-	dst2 = (unsigned char*)dst;
+	src2 = (unsigned char *)src;
+	dst2 = (unsigned char *)dst;
 	while (i < n && src2[i] != (unsigned char)c)
 	{
 		dst2[i] = src2[i];

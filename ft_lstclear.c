@@ -6,7 +6,7 @@
 /*   By: tyou <tyou@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/04 19:34:38 by tyou              #+#    #+#             */
-/*   Updated: 2021/01/05 21:18:51 by tyou             ###   ########.fr       */
+/*   Updated: 2021/06/30 20:42:00 by tyou             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 void	ft_lstclear(t_list **lst, void (*del)(void *))
 {
-	t_list *nxt;
-	t_list *save;
+	t_list	*nxt;
+	t_list	*save;
 
 	if (*lst)
 	{

@@ -6,7 +6,7 @@
 /*   By: tyou <tyou@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/04 23:55:53 by tyou              #+#    #+#             */
-/*   Updated: 2021/01/07 18:51:13 by tyou             ###   ########.fr       */
+/*   Updated: 2021/06/30 20:42:10 by tyou             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	ft_lstiter(t_list *lst, void (*f)(void *))
 {
-	t_list *list;
+	t_list	*list;
 
 	if (lst == NULL || f == NULL)
 		return ;

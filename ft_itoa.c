@@ -6,7 +6,7 @@
 /*   By: tyou <tyou@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/30 22:51:18 by tyou              #+#    #+#             */
-/*   Updated: 2021/01/08 00:23:28 by tyou             ###   ########.fr       */
+/*   Updated: 2021/06/30 20:31:18 by tyou             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,14 +14,19 @@
 
 long int	to_pos(long int nbr)
 {
-	return ((nbr < 0) ? -nbr : nbr);
+	if (nbr < 0)
+		return (-nbr);
+	return (nbr);
 }
 
-int			ft_len(long int nbr)
+int	ft_len(long int nbr)
 {
 	int		len;
 
-	len = (nbr <= 0) ? 1 : 0;
+	if (nbr <= 0)
+		len = 1;
+	else
+		len = 0;
 	while (nbr != 0)
 	{
 		nbr = nbr / 10;
@@ -30,15 +35,19 @@ int			ft_len(long int nbr)
 	return (len);
 }
 
-char		*ft_itoa(int n)
+char	*ft_itoa(int n)
 {
 	int		len;
 	int		sign;
 	char	*rt;
 
-	sign = (n < 0) ? -1 : 1;
+	if (n < 0)
+		sign = -1;
+	else
+		sign = 1;
 	len = ft_len(n);
-	if (!(rt = (char *)malloc(sizeof(char) * len + 1)))
+	rt = (char *)malloc(sizeof(char) * len + 1);
+	if (!rt)
 		return (NULL);
 	rt[len--] = '\0';
 	while (len >= 0)
